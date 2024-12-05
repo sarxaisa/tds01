@@ -202,12 +202,50 @@ values(700.20, '2024-12-01', '09:00:00', 'Edna', 'W8V-7M2', 30.00,4,5,1,2,4);
 insert into tbVendas(valor_total,dataEntr,horaEntr,nome_func,id_cartao,devolver_troco,codfunc,codProd,codCli,codPag,codCar)
 values(900.10, '2024-12-02', '13:20:00', 'Ryan', 'Z1Q-5R4', 15.00,5,1,2,3,5);
 
+update tbClientes set numero = 12 ,bairro = "Vila Mariana" where codCli=1;
+update tbClientes set numero = 34,bairro = "Copacabana" where codCli=2;
+update tbClientes set numero = 56,bairro = "Moema" where codCli=3;
+update tbClientes set numero = 78,bairro = "Botafogo" where codCli=4;
+update tbClientes set numero = 90,bairro = "Liberdade" where codCli=5;
+
+update tbFuncionarios set nome = "laryssa franco" ,funcao = "caixa" where codFunc =1;
+update tbFuncionarios set nome = "Sara gomes ", funcao = "Atendente de Padaria" where codFunc =2; 
+update tbFuncionarios set nome = "Pedro silva", funcao = " Confeiteiro" where codFunc=3; 
+update tbFuncionarios set nome = "Edna alves", funcao = "Auxiliar de Limpeza" where codFunc=4; 
+update tbFuncionarios set nome = "Ryan santos", funcao = "Auxiliar de Producao" where codFunc=5; 
+
+update tbFornecedores set logradouro = "Rua das Flores", numero = 678, bairro = "Jardim das Palmeiras" ,cep ="12345-678" where codForn=1; 
+update tbFornecedores set logradouro = "Avenida Brasil", numero = 789, bairro = "Centro" , cep ="34567-890" where codForn=2; 
+update tbFornecedores set logradouro = "Travessa da Paz", numero = 890, bairro = "Vila Nova" ,cep ="34567-890" where codForn=3; 
+update tbFornecedores set logradouro = "Praça Central", numero = 901, bairro = "Bairro Alto" ,cep ="45678-901" where codForn=4; 
+update tbFornecedores set logradouro = "Rua São João", numero = 012 , bairro = "Jardim Primavera" ,cep ="56789-012" where codForn=5; 
+
+update tbProdutos set nome='Pao' where codProd=1;
+update tbProdutos set preco=40.50 where codProd=1;
+update tbProdutos set preco=1.50 where codProd=3;
+update tbProdutos set quantidade=1000 where codProd=5;
+update tbProdutos set validade="2027/11/11" where codprod=2;
+update tbProdutos set validade="2024/03/05" where codprod=4;
+
+
 update tbEstoques set lote= '256899' where lote= '145798';
 update tbEstoques set lote= '568613' where lote= '459612';
 update tbEstoques set horaEntr= '10:50:00' where horaEntr= '10:45:00';
 update tbEstoques set horaEntr= '13:30:00' where horaEntr= '12:30:00';
 update tbEstoques set quantidade= '100' where quantidade= '20';
 
+update tbPagamentos set forma_pagamento='Debito' where codpag=1;
+update tbPagamentos set forma_pagamento='Pix' where codpag=3;
+update tbPagamentos set forma_pagamento='Credito' where codpag=5;
+update tbPagamentos set forma_pagamento='VA/VR' where codpag=4;
+update tbPagamentos set forma_pagamento='Dinheiro' where codpag=2;
+
+update tbEstoques set lote= '256899' where lote= '145798';
+update tbEstoques set lote= '568613' where lote= '459612';
+update tbEstoques set horaEntr= '10:50:00' where horaEntr= '10:45:00';
+update tbEstoques set horaEntr= '13:30:00' where horaEntr= '12:30:00';
+update tbEstoques set quantidade= '100' where quantidade= '20';
+ 
 update tbVendas set valor_total=950.75  where valor_total= 1200.50;
 update tbVendas set valor_total=550.10  where valor_total= 500.75;
 update tbVendas set devolver_troco=25.00 where devolver_troco=30.00;
